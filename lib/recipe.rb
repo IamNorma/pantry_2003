@@ -12,6 +12,12 @@ class Recipe
       @ingredients_required[ingredient] = amount_required
     else
       @ingredients_required[ingredient] += amount_required
-    end 
+    end
+  end
+
+  def ingredients
+    @ingredients_required.map do |ingredient, amount_required|
+      ingredient
+    end
   end
 end
