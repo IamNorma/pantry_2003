@@ -10,6 +10,10 @@ class Pantry
   end
 
   def restock(ingredient, amount)
-    @stock[ingredient] += amount 
+    @stock[ingredient] += amount
+  end
+
+  def enough_ingredients_for?(recipe)
+    recipe.ingredients_required
   end
 end
