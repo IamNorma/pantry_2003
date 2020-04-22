@@ -24,5 +24,8 @@ class PantryTest < Minitest::Test
       calories: 50})
 
     assert_equal 0, pantry.stock_check(ingredient1)
+    pantry.restock(ingredient1, 5)
+    pantry.restock(ingredient1, 10)
+    assert_equal 15, pantry.stock_check(ingredient1)
   end
 end
